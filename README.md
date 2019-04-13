@@ -23,7 +23,6 @@ All scripts assume that docker is installed and running natively.
 ## Catalog
 
 * [mysql](mysql/README.md)
-* [oracle](oracle/README.md)
 
 ## Compatibility
 
