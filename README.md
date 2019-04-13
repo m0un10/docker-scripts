@@ -2,7 +2,7 @@
 
 A collection of useful bash scripts for Docker.
 
-This repository contains 3 different types of bash scripts
+These scripts come in 3 different flavours
 
 - **direct** - operate directly on containers
 - **sidecar** - operate as sidecars to existing containers either by joining the network or accessing a shared volume
@@ -31,4 +31,4 @@ Scripts are generally executed against Darwin (Mac OS X), but should operate fin
 
 ## Contributing
 
-Please see [CONTRIBUTING.md])(CONTRIBUTING.md) for more details.
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
