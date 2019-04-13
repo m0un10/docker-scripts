@@ -4,7 +4,7 @@ A collection of useful bash scripts for Docker.
 
 These scripts come in 3 different flavours
 
-- **direct** - operate directly on containers
+- **direct** - operate directly against existing containers
 - **sidecar** - operate as sidecars to existing containers either by joining the network or accessing a shared volume
 - **client** - scripts that use docker for containing dependencies required to connect and operate with other services (not necessarily other containers)
 
