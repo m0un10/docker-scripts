@@ -5,7 +5,7 @@
 
 runScript(){
   [[ ! -z "${IMAGE}" ]] || IMAGE=mysql:5.6
-  docker run -i ${IMAGE} /bin/sh -c \
+  docker run --rm -i ${IMAGE} /bin/sh -c \
     'mysql -u ${1} -p ${2} -h ${3}'
 }
 

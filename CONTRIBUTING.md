@@ -14,7 +14,7 @@ Below are the standards that I adhered to in developing the scripts:
 - Scripts should be kept readable by breaking long lines with `\`
 - Where possible, key logic should be included in functions to allow for copy+paste and reuse in other scripts.
 - Sidecar scripts should rely on `DOCKER_NETWORK` and `DOCKER_VOLUME` environment variables as the source for connectivity
-- Sidecar and external scripts should not use hardcoded names and ports to avoid conflicts and should clean up afterwards (`--rm`)
+- Where applicable, scripts should not use hardcoded names and ports to avoid conflicts and should clean up afterwards (`--rm`)
 - Direct scripts should take the container name as the first argument. (e.g. `script.sh <input>`)
 - Use official images by default. Images should be able to changed with `IMAGE` environment variable
 
@@ -24,6 +24,6 @@ Scripts are organised under the following convention
 | -------------- | -------------------------------- | --------------------------------- |
 | Direct         | `<service>/<action>.sh`          | `mysql/load-db.sh`                |
 | Sidecar        | `<service>/sidecar/<action>.sh`  | `oracle/sidecar/create-schema.sh` |
-| Client       | `<service>/client/<action>.sh` | `mysql/client/backup-db.sh`     |
+| Client         | `<service>/client/<action>.sh`   | `mysql/client/backup-db.sh`       |
 
 Environment variables should be named with object and attribute (e.g. `DATABASE_NAME`). In some cases only object is sufficient (e.g. `DATABASE`) when the attribute is obvious and there is no other environment variables that would make it ambiguous.

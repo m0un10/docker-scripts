@@ -8,7 +8,7 @@ backupDatabase(){
   [[ ! -z "${IMAGE}" ]] || IMAGE=mysql:5.6
   DATETIME=`date +%Y-%m-%d-%H-%M-%S`
   FILENAME=${4}-${DATETIME}.sql
-docker run -ti ${IMAGE} /bin/sh -c \
+docker run --rm -ti ${IMAGE} /bin/sh -c \
 "mysqldump -u ${1} -p${2} -h ${3} --databases ${4}" > ${FILENAME}
 }
 
