@@ -24,6 +24,6 @@ Scripts are organised under the following convention
 | -------------- | -------------------------------- | --------------------------------- |
 | Direct         | `<service>/<action>.sh`          | `mysql/load-db.sh`                |
 | Sidecar        | `<service>/sidecar/<action>.sh`  | `oracle/sidecar/create-schema.sh` |
-| External       | `<service>/client/<action>.sh` | `mysql/external/backup-db.sh`     |
+| Client       | `<service>/client/<action>.sh` | `mysql/client/backup-db.sh`     |
 
 Environment variables should be named with object and attribute (e.g. `DATABASE_NAME`). In some cases only object is sufficient (e.g. `DATABASE`) when the attribute is obvious and there is no other environment variables that would make it ambiguous.
