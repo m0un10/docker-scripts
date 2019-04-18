@@ -7,15 +7,15 @@
 Opens a `mysql` prompt to the mysql database container
 
 ```bash
-./mysql/run-script.sh <CONTAINER>
+./mysql/run-prompt.sh <CONTAINER>
 ```
 
-### Run Script
+### Run SQL script
 
 Runs an sql script against the mysql database container
 
 ```bash
-./mysql/run-script.sh <CONTAINER> <SCRIPT>
+./mysql/run-sql.sh <CONTAINER> <SCRIPT>
 ```
 
 ## Run MySQL client as a Docker container
@@ -62,13 +62,13 @@ HOST=? \
 mysql/client/backup-db.sh
 ```
 
-### Run Script
+### Run SQL script
 
-The scripts can be stored locally or in an S3 bucket. This approach can be used
+The SQL scripts can be stored locally or in an S3 bucket. This approach can be used
 to apply backups to existing MySQL instances. To apply a backup over the top of
 an existing database (e.g. in a dev/test environment), you will need to add the `drop database <name>;` record to the top of the backup file.
 
-#### Run local script
+#### Run local SQL script
 
 Create a backup from a MySQL database and write it locally.
 
@@ -76,10 +76,10 @@ Create a backup from a MySQL database and write it locally.
 USERNAME=? \
 PASSWORD=? \
 HOST=? \
-mysql/client/run-script.sh /path/to/script.sql
+mysql/client/run-sql.sh /path/to/script.sql
 ```
 
-#### Run script from S3
+#### Run SQL script from S3
 
 Create a backup from a MySQL database and write it in the given S3 bucket.
 
@@ -87,7 +87,7 @@ Create a backup from a MySQL database and write it in the given S3 bucket.
 USERNAME=? \
 PASSWORD=? \
 HOST=? \
-mysql/client/run-script.sh s3://mybucket/backups/script.sql
+mysql/client/run-sql.sh s3://mybucket/backups/script.sql
 ```
 
 ## Advanced Arguments for S3
